@@ -23,10 +23,9 @@ const dbURI =
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
-    app
-      .listen(port, () => {
-        console.log(`Listening on port ${port}`);
-      })
-      .catch((err) => console.log(err))
-  );
+    app.listen(port, () => {
+      console.log(`Listening on port ${port}`);
+    })
+  )
+  .catch((err) => console.log(err));
 console.log("Listening to port 3000");
